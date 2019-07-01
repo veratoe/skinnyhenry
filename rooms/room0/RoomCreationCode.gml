@@ -1,0 +1,1 @@
+initializeGameController();
