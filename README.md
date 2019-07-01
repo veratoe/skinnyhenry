@@ -1,4 +1,4 @@
 # skinnyhenry
 Skinny Henry
 
-<img src="https://github.com/veratoe/skinnyhenry/blob/master/bg.gif" width="300">
+<img src="https://github.com/veratoe/skinnyhenry/blob/master/bg.gif" width="150">
