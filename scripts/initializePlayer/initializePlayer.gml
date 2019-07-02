@@ -2,6 +2,8 @@ playerJumpKey = global.jumpKey
 playerRightKey = global.rightKey
 playerLeftKey = global.leftKey
 
+isDead = false;
+
 jumpSpeed = 10;
 
 maxSpeedX = 6;
@@ -21,4 +23,6 @@ state = playerState.idle;
 xSpeed = 0;
 ySpeed = 0;
 
-imageIndex = 0;
+
+steps = 0;
+

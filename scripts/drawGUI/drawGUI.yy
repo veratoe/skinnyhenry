@@ -1,8 +1,8 @@
 {
-    "id": "200d04f2-13a1-4888-9acc-35cc7222bea2",
+    "id": "beb7224d-817b-404f-afc6-76bb1f08905d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "drawPlayer",
+    "name": "drawGUI",
     "IsCompatibility": false,
     "IsDnD": false
 }

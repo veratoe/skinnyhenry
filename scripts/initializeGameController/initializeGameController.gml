@@ -9,3 +9,5 @@ buildingHeight = 600;
 
 
 instance_create_layer(0, 0, "instance_layer", oCamera)
+
+audio_play_sound(snBackgroundMusic, 10, /* loop */ true);
