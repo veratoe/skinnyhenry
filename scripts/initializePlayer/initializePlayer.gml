@@ -4,25 +4,25 @@ playerLeftKey = global.leftKey
 
 isDead = false;
 
-jumpSpeed = 10;
-
+jumpSpeed = 24;
 maxSpeedX = 6;
-maxSpeedY = 67;
+gForce = 1.27;
 
 enum playerState {
 	idle,
 	jumping
 }
 
-accelerationY = .7;
-accelerationX = .8;
-fric = .2;
+
 
 state = playerState.idle;
 
 xSpeed = 0;
 ySpeed = 0;
 
+xFloat = x;
+yFloat = y;
 
 steps = 0;
+isGrounded = false;
 

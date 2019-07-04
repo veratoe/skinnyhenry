@@ -6,79 +6,70 @@ if (isDead) {
 	return	
 }
 
-if (rightKeyDown && !place_meeting(x + 1, y, oBuilding)) {
-
-	if (xSpeed < maxSpeedX) {
-		xSpeed += accelerationX;
-	}
-		
-}
-
-if (leftKeyDown && !place_meeting(x - 1, y, oBuilding)) {
-	if (xSpeed > -maxSpeedX) {
-		xSpeed -= accelerationX;
-	}
-	
-}
-
 xSpeed = maxSpeedX;
 
-if(!rightKeyDown && !leftKeyDown && xSpeed != 0) {
-	xSpeed -= sign(xSpeed) * fric;
+if (!isGrounded) {
+	ySpeed += gForce;
 }
 
-if (jumpKeyDown && state != playerState.jumping) {	
+if (jumpKeyDown && state != playerState.jumping && isGrounded) {	
 	audio_play_sound(snJump, 10, false);
 	state = playerState.jumping;
 	ySpeed = -jumpSpeed;
 }
 
-// update X
 
-if (xSpeed > 0 && place_meeting(x + xSpeed, y, oBuilding)) {
-	block = instance_place(x + xSpeed, y, oBuilding)
-	while (place_meeting(x + xSpeed, y, oBuilding)) {
-		x -= block.x > x ? 1: -1;
+// collision testing X
+
+if (place_meeting(xFloat + xSpeed, y, oBuilding)) {	
+	while (!place_meeting(x + 1, y, oBuilding)) {
+		x++;
 	}
+	xFloat = x;
 	xSpeed = 0;
 
 } 
 
-if (xSpeed < 0 && place_meeting(x + xSpeed, y, oBuilding)){	
-	block = instance_place(x + xSpeed, y, oBuilding)
-	while (place_meeting(x + xSpeed, y, oBuilding)) {
-		x -= block.x > x ? 1: -1;
-	} 
-	xSpeed = 0;
-} 
+// collision testing Y
 
-// -- dead --
-if (y > 800 && !isDead) {
-	isDead = true;	
-	audio_play_sound(snDead, 10, false);
+if (!place_meeting(x, y + 1, oBuilding)) {
+	isGrounded = false;	
 }
 
-// update Y
 
-if (!place_meeting(x, y + ySpeed, oBuilding)) {	
-	ySpeed += accelerationY;
-} else {
+if (place_meeting(x, yFloat + ySpeed, oBuilding)) {	
 	
-	var building = instance_place(x, y + ySpeed, oBuilding);
-	y = building.bbox_top - 94;
+	while (!place_meeting(x, y + 1, oBuilding)) {
+		y++;
+	} 
 	
+	yFloat = y;
+	ySpeed = 0;
 	
+	isGrounded = true;
+	
+
 	if (state == playerState.jumping) {
 		state = playerState.idle;	
 		audio_play_sound(snLand, 10, false);
 	}
 	
-	ySpeed = 0;
-
 }
 
-x += xSpeed;
-y += ySpeed;
+xFloat += xSpeed;
+yFloat += ySpeed;
+
+x = round(xFloat);
+y = round(yFloat);
+
+// -- dead --
+if (y > 800 && !isDead) {
+	isDead = true;	
+	audio_play_sound(snDead, 10, false);
+	gameController = instance_find(oGameController, 0)
+	gameController.alarm[0] = 90.0;
+}
+
 
 // --- graphics ---
 
@@ -111,4 +102,3 @@ if (xSpeed > 0 && state != playerState.jumping) {
 } else {
 	steps = 0;
 }
-

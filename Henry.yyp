@@ -103,11 +103,27 @@
             }
         },
         {
+            "Key": "326569c4-5a7a-46ad-9634-c201d6cdc8cf",
+            "Value": {
+                "id": "beb22694-b1e7-4535-a955-ba73ab204481",
+                "resourcePath": "sprites\\sprite6\\sprite6.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3741ae96-0665-4b78-bf5c-2c3c33aafedf",
             "Value": {
                 "id": "bb964cba-b62e-4b4b-b321-58657be4b442",
                 "resourcePath": "views\\3741ae96-0665-4b78-bf5c-2c3c33aafedf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3c20141b-9396-42c5-80dd-32e079577d67",
+            "Value": {
+                "id": "98572afd-fc49-4756-a10d-338efb17bcd4",
+                "resourcePath": "sprites\\sprite7\\sprite7.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -231,6 +247,14 @@
             }
         },
         {
+            "Key": "906db264-fb42-4ef2-9183-99208eda8830",
+            "Value": {
+                "id": "02ee66de-f6f0-4999-ac7b-b44b0e40a28a",
+                "resourcePath": "scripts\\resetGameController\\resetGameController.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "90980489-8055-4773-8ecb-686e42509f2c",
             "Value": {
                 "id": "7585c516-9254-4c09-84fd-0c0331c558e4",
@@ -260,6 +284,14 @@
                 "id": "ee8d7a8d-ca63-4ab1-b612-47b71644de76",
                 "resourcePath": "objects\\oPlayer\\oPlayer.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ade8220f-69cd-489c-8a33-0799ff3a7eaa",
+            "Value": {
+                "id": "0c28d4d7-f422-41f5-add6-0f0e865c2449",
+                "resourcePath": "scripts\\resetPlayer\\resetPlayer.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -405,6 +437,14 @@
                 "resourcePath": "views\\fd4ea1df-d504-4293-acfd-77d039bde61c.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "fd7ea844-0abe-4039-a9d2-2d3383ab82a9",
+            "Value": {
+                "id": "24767d5e-0020-406c-b501-5ba0a9c92969",
+                "resourcePath": "objects\\WUBBEL\\WUBBEL.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
@@ -412,7 +452,9 @@
         "7107f006-36d2-4c64-9353-ce72f96956f8",
         "96f146af-4748-4043-93f4-b0e363eeaddb",
         "3d586b84-6361-462c-b65d-2113d654f267",
-        "beb7224d-817b-404f-afc6-76bb1f08905d"
+        "beb7224d-817b-404f-afc6-76bb1f08905d",
+        "906db264-fb42-4ef2-9183-99208eda8830",
+        "ade8220f-69cd-489c-8a33-0799ff3a7eaa"
     ],
     "tutorial": ""
 }
